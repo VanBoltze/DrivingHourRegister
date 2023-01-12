@@ -34,7 +34,7 @@ def getAllCars():
                 tmp = True
         if not tmp:
             carList.append(table[i][2])
-     for c in carList:
+    for c in carList:
         print(c)
     
 def createNewRegister(namePath):

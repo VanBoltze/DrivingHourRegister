@@ -20,6 +20,23 @@ def readEP(car = defaultCar):
             exp += int(table[i][1])
     print(exp)
 
+def getAllCars():
+    carList = []
+    tmp = False
+    dataset = open(path)
+    table = dataset.read()
+    table = table.split(";")
+    for i in range(len(table)):
+        table[i] = table[i].split(",")
+    for i in range(len(table)):
+        for c in carList:
+            if table[i][2] == c:
+                tmp = True
+        if not tmp:
+            carList.append(table[i][2])
+     for c in carList:
+        print(c)
+    
 def createNewRegister(namePath):
     file = open(namePath, "w+")
     file.write("0.0.0,0,0")
@@ -45,6 +62,8 @@ while use != 0:
         use = 0
     elif order == "setRegister":
         path = input("File Path: ")
+    elif order == "getAllCars":
+        getAllCars()
     else:
         print("command not found")
 

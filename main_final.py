@@ -35,7 +35,7 @@ while use != 0:
     elif order == "getCar":
         print(defaultCar)
     elif order == "newRegister":
-        path = input("Path + Name (folders divided by double backslash: ")
+        path = input("Path + Name (folders divided by double backslash): ")
         createNewRegister(path)
     elif order == "getRegister":
         print(path)
